@@ -1,4 +1,13 @@
-<div class="container">
-  <h1>Roster Manager</h1>
-  <router-outlet></router-outlet>
-</div>
+<body [@navPanel]='state'>
+  <div class="container">
+    <h1>F@kers Gaming Team</h1>
+    <nav [@movePanel]='state'>
+      <a routerLink="/start" routerLinkActive="active" (click)="navClick('home')">Home (List)</a>
+      <a routerLink="/about" routerLinkActive="active" (click)="navClick('about')">About</a>
+      <a routerLink="/admin" routerLinkActive="active" (click)="navClick('admin')">Admin</a>
+    </nav>
+    <main>
+      <router-outlet [@routerTransition]=""></router-outlet>
+    </main>
+  </div>
+</body>

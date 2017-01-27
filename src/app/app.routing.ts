@@ -8,10 +8,15 @@ import { AdminComponent }   from './admin/admin.component';
 const appRoutes: Routes = [
   {
     path: '',
+    redirectTo: 'start',
+    pathMatch: 'full'
+  },
+  {
+    path: 'start',
     component: StartComponent
   },
   {
-    path: 'About',
+    path: 'about',
     component: AboutComponent
   },
   {

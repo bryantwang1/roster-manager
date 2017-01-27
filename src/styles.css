@@ -11,3 +11,25 @@
 .form-textarea {
   margin-bottom: 1vh;
 }
+
+h1 {
+  text-align: center;
+}
+
+a.active {
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+nav {
+  text-align: center;
+}
+
+a {
+  color: lightgray;
+}
+
+body {
+  height: 100%;
+  background-color: gray;
+}

@@ -3,12 +3,15 @@ import { Member } from '../member.model';
 import { MemberService } from '../member.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { Router } from '@angular/router';
+import { routerTransition } from '../router.animations';
 
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',
   styleUrls: ['./start.component.css'],
-  providers: [MemberService]
+  providers: [MemberService],
+  animations: [routerTransition()],
+  host: {'[@routerTransition]': ''}
 })
 export class StartComponent implements OnInit {
   members: FirebaseListObservable<any[]>;

@@ -2,12 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 import { MemberService } from '../member.service';
 import { Member } from '../member.model';
+import { routerTransition } from '../router.animations';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css'],
-  providers: [MemberService]
+  providers: [MemberService],
+  animations: [routerTransition()],
+  host: {'[@routerTransition]': ''}
 })
 export class AdminComponent implements OnInit {
 
