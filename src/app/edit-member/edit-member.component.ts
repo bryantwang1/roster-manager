@@ -20,4 +20,10 @@ export class EditMemberComponent implements OnInit {
     this.memberService.updateMember(member);
   }
 
+  deleteMember(member) {
+    if(confirm("Are you sure you want to delete this member?")){
+      this.memberService.deleteMember(member);
+    }
+  }
+
 }

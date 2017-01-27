@@ -30,4 +30,9 @@ export class MemberService {
       description: updatedMember.description
     });
   }
+
+  deleteMember(memberToDelete) {
+    var memberInFirebase = this.findMember(memberToDelete.$key);
+    memberInFirebase.remove();
+  }
 }

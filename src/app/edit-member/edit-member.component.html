@@ -10,8 +10,12 @@
   <input [(ngModel)]="selectedMember.genre">
 </div>
 
-<div class="form-group">
+<div class="form-textarea">
   <label>New Member Description:</label>
-  <input [(ngModel)]="selectedMember.description">
+  <textarea [(ngModel)]="selectedMember.description"></textarea>
 </div>
-<button (click)="saveEdits(selectedMember)">Save Changes</button>
+<div class="button-row">
+  <button (click)="saveEdits(selectedMember)" class="btn btn-success">Save Changes</button>
+  <div class="spacer"></div>
+  <button (click)="deleteMember(selectedMember)" class="btn btn-danger">Delete Member</button>
+</div>

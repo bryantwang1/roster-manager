@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.form-textarea label {
+  vertical-align: top;
+}
+
+.form-textarea textarea {
+  vertical-align: top;
+  width: 50%;
+}
+
+.form-textarea {
+  margin-bottom: 1vh;
+}
