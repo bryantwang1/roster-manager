@@ -1,3 +1,5 @@
-<p>
-  start works!
-</p>
+<h3>Member List</h3>
+<div *ngFor="let member of members | async" class="member-block">
+  <h4>Name: {{member.name}}</h4>
+  <h5>Specialty Genre: {{member.genre}}</h5>
+</div>
