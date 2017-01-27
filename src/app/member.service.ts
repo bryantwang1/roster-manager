@@ -13,4 +13,8 @@ export class MemberService {
   getMembers() {
     return this.members;
   }
+
+  addMember(newMember: Member) {
+    this.members.push(newMember);
+  }
 }
