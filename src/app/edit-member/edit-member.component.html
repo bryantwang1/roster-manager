@@ -1,0 +1,17 @@
+<h3>Edit Album</h3>
+
+<div class="form-group">
+  <label>New Member Name:</label>
+  <input [(ngModel)]="selectedMember.name">
+</div>
+
+<div class="form-group">
+  <label>New Member Genre:</label>
+  <input [(ngModel)]="selectedMember.genre">
+</div>
+
+<div class="form-group">
+  <label>New Member Description:</label>
+  <input [(ngModel)]="selectedMember.description">
+</div>
+<button (click)="saveEdits(selectedMember)">Save Changes</button>

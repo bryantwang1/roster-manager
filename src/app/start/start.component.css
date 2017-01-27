@@ -5,7 +5,12 @@
   border-radius: 5px;
 }
 
-.member-block:hover {
+.member-head {
+  padding: 1vh;
+  border-radius: 10px;
+}
+
+.member-head:hover {
   cursor: pointer;
   background-color: lightgray;
 }

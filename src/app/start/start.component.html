@@ -1,5 +1,12 @@
 <h3>Member List</h3>
-<div *ngFor="let member of members | async" class="member-block" (click)="goToDetails(member)">
-  <h4>Name: {{member.name}}</h4>
-  <h5>Specialty Genre: {{member.genre}}</h5>
+<div *ngFor="let member of members | async" class="member-block">
+  <div class="member-head" (click)="goToDetails(member)">
+    <h4>Name: {{member.name}}</h4>
+    <h5>Specialty Genre: {{member.genre}}</h5>
+  </div>
+  <div *ngIf="currentRoute === '/admin'">
+    {{member.description}}
+    <hr>
+    <app-edit-member [selectedMember]="member"></app-edit-member>
+  </div>
 </div>

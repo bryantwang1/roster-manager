@@ -21,4 +21,13 @@ export class MemberService {
   findMember(searchId: string) {
     return this.angularFire.database.object('members/' + searchId);
   }
+
+  updateMember(updatedMember) {
+    var memberInFirebase = this.findMember(updatedMember.$key);
+    memberInFirebase.update({
+      name: updatedMember.name,
+      genre: updatedMember.genre,
+      description: updatedMember.description
+    });
+  }
 }
