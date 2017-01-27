@@ -1,6 +1,11 @@
 .member-block {
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin: 1vh;
   border: 1px solid gray;
   padding: 1vh;
+  border-radius: 5px;
+}
+
+.member-block:hover {
+  cursor: pointer;
+  background-color: lightgray;
 }

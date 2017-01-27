@@ -1,3 +1,6 @@
-<p>
-  member-detail works!
-</p>
+<div>
+  <h2>Name: {{(selectedMember | async)?.name}}</h2>
+  <h3>Specialty Genre: {{(selectedMember | async)?.genre}}</h3>
+  <h3>Description: </h3>
+  <p>{{(selectedMember | async)?.description}}</p>
+</div>

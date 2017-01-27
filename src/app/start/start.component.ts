@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Member } from '../member.model';
 import { MemberService } from '../member.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-start',
@@ -12,10 +13,14 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 export class StartComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
 
-  constructor(private memberService: MemberService) { }
+  constructor(private memberService: MemberService, private router: Router) { }
 
   ngOnInit() {
     this.members = this.memberService.getMembers();
+  }
+
+  goToDetails(clickedMember) {
+    this.router.navigate(['members', clickedMember.$key]);
   }
 
 }
