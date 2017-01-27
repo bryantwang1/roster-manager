@@ -1,5 +1,11 @@
 <h3>Member List</h3>
-<div *ngFor="let member of members | async" class="member-block">
+
+<select (change)="onChange($event.target.value)">
+  <option value="none">None</option>
+  <option *ngFor="let genre of genres" value="{{genre}}">{{genre}}</option>
+</select>
+
+<div *ngFor="let member of members | async | byGenre:filterByGenre" class="member-block">
   <div class="member-head" (click)="goToDetails(member)">
     <h4>Name: {{member.name}}</h4>
     <h5>Specialty Genre: {{member.genre}}</h5>

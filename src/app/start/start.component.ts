@@ -13,15 +13,21 @@ import { Router } from '@angular/router';
 export class StartComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  genres: string[];
+  filterByGenre: string = "none";
 
   constructor(private memberService: MemberService, private router: Router) { }
 
   ngOnInit() {
     this.members = this.memberService.getMembers();
+    this.genres = this.memberService.getGenres();
   }
 
   goToDetails(clickedMember) {
     this.router.navigate(['members', clickedMember.$key]);
   }
 
+  onChange(genre) {
+    this.filterByGenre = genre;
+  }
 }

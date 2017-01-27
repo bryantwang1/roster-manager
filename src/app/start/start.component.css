@@ -8,9 +8,11 @@
 .member-head {
   padding: 1vh;
   border-radius: 10px;
+  background-color: lightgray;
+  margin-bottom: 0.4vh;
 }
 
 .member-head:hover {
   cursor: pointer;
-  background-color: lightgray;
+  background-color: skyblue;
 }

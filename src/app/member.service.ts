@@ -14,6 +14,18 @@ export class MemberService {
     return this.members;
   }
 
+  getGenres() {
+    var genres: string[] = [];
+    this.members.forEach((memberList) => {
+      memberList.forEach((member) => {
+        if(genres.indexOf(member.genre) < 0) {
+          genres.push(member.genre);
+        }
+      });
+    });
+    return genres;
+  }
+
   addMember(newMember: Member) {
     this.members.push(newMember);
   }
