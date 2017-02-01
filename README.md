@@ -2,6 +2,46 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
 
+#### _A project for demonstrating knowledge of AngularJS 2 for Epicodus that allows users to track members of a gaming team_
+
+#### By _**Bryant Wang**_
+
+## Setup/Installation Requirements
+
+_To run this web app you need Node.js installed._
+
+1. Clone this repository
+2. Open your console program(Terminal, Powershell, etc.)
+3. In your console, navigate to the cloned project folder
+4. Run the following:
+
+          > npm install
+          > bower install
+
+5. Go to your Firebase account, make a new app, and get credentials to add Firebase to a web app.
+6. In the path `src/app`, make an `api-keys.ts` file that contains the following, replacing the fields with your credentials from Firebase:
+
+          > export var masterFirebaseConfig = {
+              apiKey: "xxxx",
+              authDomain: "xxxx.firebaseapp.com",
+              databaseURL: "https://xxxx.firebaseio.com",
+              storageBucket: "xxxx.appspot.com",
+              messagingSenderId: "xxxx"
+            };
+
+7. Run `ng serve` in the console. The app should now be running on your local server.
+
+
+## Technologies Used
+
+_AngularJS, Node.js (mostly for npm), bower, sass, edited in Atom_
+
+### License
+
+*GPL*
+
+Copyright (c) 2017 **_Bryant Wang_**
+
 ## GitHub Pages Link
 https://bryantwang1.github.io/roster-manager/
 
